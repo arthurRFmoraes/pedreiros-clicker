@@ -1,0 +1,44 @@
+body{
+    font-family: sans-serif;
+    background-image: url(./images/background-osasco.jpg);
+}
+#main{
+    margin: 0px 60px;
+    background-color: white;
+
+}
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.cash{
+    font-size: 40px;
+
+
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.pedreiro{
+    color: red;
+
+}
+.hammer{
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: none;
+}
+.hammer:hover{
+    width: 105px;
+}
+.hammer:active{
+    width: 102px;
+}
+
+.upgrade{
+    display: block;
+    margin: 10px 5px;
+}
