@@ -1,6 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
 body{
     font-family: sans-serif;
     background-image: url(./images/background-osasco.jpg);
+}
+.btnUpgrade{
+    background-size: cover;
+    width: 100px;
+    height: 100px;
 }
 #main{
     margin: 0px 60px;
@@ -14,7 +30,6 @@ body{
 }
 .cash{
     font-size: 40px;
-
 
 }
 .center{
@@ -31,14 +46,31 @@ body{
     padding: 0;
     border: none;
 }
-.hammer:hover{
-    width: 105px;
-}
-.hammer:active{
-    width: 102px;
-}
+
 
 .upgrade{
-    display: block;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
     margin: 10px 5px;
+    border: 1px solid red;
+}
+#btnBrick{
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-image: url('./images/brick.png');
+}
+#btnBrick:hover{
+    width: 105px;
+}
+#btnBrick:active{
+    width: 102px;
+}
+#btnUpgPedreiro{
+    background-image: url('./images/pedreiro.jpg');
+}
+#btnUpgConstrutora{
+    background-image: url('./images/upgrade2.jpeg');
 }
