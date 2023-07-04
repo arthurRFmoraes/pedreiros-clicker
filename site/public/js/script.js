@@ -6,17 +6,17 @@ const construtoraBuildingNum = document.getElementById('construtoraBuildingNum')
 const btnBrick = document.getElementById('btnBrick')
 const btnUpgPedreiro = document.getElementById('btnUpgPedreiro');
 const btnUpgConstrutora = document.getElementById('btnUpgConstrutora');
-function Building(buildingName, totalBuildings, bpsBuilding, buildingCost, buildingCostIncrease){
+function Building(buildingName, totalBuildings, bpsBuilding, buildingCost){
     this.buildingName = buildingName + 'Building';
     this.totalBuildings = totalBuildings;
     this.bpsBuilding = bpsBuilding;
     this.buildingCost = buildingCost;
-    this.buildingCostIncrease = buildingCostIncrease;
 }
 let bpsUpgrade = setInterval(() => {
     brick += bricksPerSecond;
     brickId.innerHTML = brick;
 }, 1000);
+
 
 let pedreiroBuilding = new Building('pedreiro', 0, 1, 10, 0.33);
 let construtoraBuilding = new Building('construtora', 0, 5, 100, 0.35);
@@ -36,12 +36,11 @@ function upgrade(building){
         building.totalBuildings += 1;
         bricksPerSecond += building.bpsBuilding;
         brick -= building.buildingCost;
-        building.buildingCost += Number((building.buildingCost * building.buildingCostIncrease).toFixed(0));
+        building.buildingCost = Number((building.buildingCost * 1.10 ** building.totalBuildings).toFixed(0));
         brickId.innerText = brick;
         buildingNum.innerHTML = building.totalBuildings;
-        buildingCost.innerText = building.buildingCost
+        buildingCost.innerText = building.buildingCost;
     }
-    console.log('a')
 }
 
 btnBrick.addEventListener("click", handWork);
